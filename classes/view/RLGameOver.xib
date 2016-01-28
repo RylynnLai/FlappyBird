@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RLGameOver"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dQA-m9-EfC" customClass="RLGameOver">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text_game_over" translatesAutoresizingMaskIntoConstraints="NO" id="dUI-NE-zh8">
+                    <rect key="frame" x="198" y="150" width="204" height="54"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="3aq-LV-y11"/>
+                        <constraint firstAttribute="width" constant="204" id="CAZ-Q7-Mya"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score_panel" translatesAutoresizingMaskIntoConstraints="NO" id="RVR-2P-YTW">
+                    <rect key="frame" x="181" y="234" width="238" height="126"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="126" id="GaP-76-rks"/>
+                        <constraint firstAttribute="width" constant="238" id="I1F-1F-uMz"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-Un-9nP" userLabel="ok">
+                    <rect key="frame" x="181" y="390" width="80" height="28"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="G8j-QF-ri8"/>
+                        <constraint firstAttribute="height" constant="28" id="pUF-Lp-eix"/>
+                    </constraints>
+                    <state key="normal" image="button_ok"/>
+                    <connections>
+                        <action selector="okBtnClick:" destination="-1" eventType="touchUpInside" id="HKu-bk-x0r"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEK-bB-pqb" userLabel="share">
+                    <rect key="frame" x="339" y="390" width="80" height="28"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="GD4-aW-RiM"/>
+                        <constraint firstAttribute="height" constant="28" id="Zmb-6g-9Ec"/>
+                    </constraints>
+                    <state key="normal" image="button_share"/>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OEK-bB-pqb" firstAttribute="top" secondItem="RVR-2P-YTW" secondAttribute="bottom" constant="30" id="3zP-p7-9yr"/>
+                <constraint firstItem="ejf-Un-9nP" firstAttribute="top" secondItem="RVR-2P-YTW" secondAttribute="bottom" constant="30" id="9CA-aK-pDk"/>
+                <constraint firstItem="RVR-2P-YTW" firstAttribute="top" secondItem="dUI-NE-zh8" secondAttribute="bottom" constant="30" id="MZg-au-o16"/>
+                <constraint firstItem="OEK-bB-pqb" firstAttribute="trailing" secondItem="RVR-2P-YTW" secondAttribute="trailing" id="Ou2-X6-G4x"/>
+                <constraint firstItem="RVR-2P-YTW" firstAttribute="centerX" secondItem="dQA-m9-EfC" secondAttribute="centerX" id="Qam-XD-Xai"/>
+                <constraint firstItem="dUI-NE-zh8" firstAttribute="top" secondItem="dQA-m9-EfC" secondAttribute="top" constant="150" id="eD3-qE-shg"/>
+                <constraint firstItem="ejf-Un-9nP" firstAttribute="leading" secondItem="RVR-2P-YTW" secondAttribute="leading" id="kId-Z6-GcR"/>
+                <constraint firstItem="dUI-NE-zh8" firstAttribute="centerX" secondItem="dQA-m9-EfC" secondAttribute="centerX" id="qXh-Wb-Pbe"/>
+            </constraints>
+            <point key="canvasLocation" x="216" y="969"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_ok" width="80" height="28"/>
+        <image name="button_share" width="80" height="28"/>
+        <image name="score_panel" width="238" height="126"/>
+        <image name="text_game_over" width="204" height="54"/>
+    </resources>
+</document>
